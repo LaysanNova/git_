@@ -2,7 +2,7 @@ class Animals:
     def __init__(self, vertebrate, animal_class, name, blood):
         self.__vertebrate = 'vertebrate'
         self.__animal_class = animal_class
-        self.name = name
+        self.__name = name
         self.blood = blood
 
 
@@ -17,6 +17,13 @@ class Animals:
 
     def get_animal_class(self):
         return f'I am from {self.__animal_class}'
+
+    def set_animal_class(self, new_name):
+        if new_name == '':
+            return 'You must enter the name'
+        else
+            return 'The Name has been changed'
+
 
 
 class Amphibian(Animals):
