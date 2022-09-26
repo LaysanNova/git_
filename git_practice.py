@@ -18,13 +18,15 @@ class Animals:
     def get_animal_class(self):
         return f'I am from {self.__animal_class}'
 
-    def set_animal_class(self, new_name):
+    def get_name(self):
+        return f'My name is {self.__name}'
+
+    def set_name(self, new_name):
         if new_name == '':
             return 'You must enter the name'
-        else
+        else:
+            self.__name = new_name
             return 'The Name has been changed'
-
-
 
 class Amphibian(Animals):
     def __init__(self, vertebrate, animal_class, name, blood, skin):
@@ -84,3 +86,5 @@ class Reptile(Animals):
 #****************************************************
 
 frog1 = Amphibian('Vertbrate', 'Amphibian', 'Glass frog', 'Cold blood', 'Moist skin')
+frog1.set_name('Toad')
+print(frog1.get_name())
